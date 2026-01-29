@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Film Dünyası | Premium Film Rehberi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-view">
+        <header>
+            <div class="container nav-content">
+                <div class="logo-group">
+                    <a href="#" class="logo" onclick="location.reload()">FILM<span>DÜNYASI</span></a>
+                    <button id="searchToggle" class="search-toggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+                <div class="search-wrapper" id="searchWrapper">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Film ara...">
+                        <button id="searchBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="categories-wrapper">
+            <div class="categories container">
+                <button class="cat-btn active" data-type="popular">Popüler</button>
+                <button class="cat-btn" data-type="top_rated">En İyiler</button>
+                <button class="cat-btn" data-type="upcoming">Yakında</button>
+            </div>
+        </div>
+
+        <main class="container">
+            <section class="movies-grid" id="moviesGrid">
+                <!-- Skeletons will be here -->
+            </section>
+            <div class="pagination" id="pagination"></div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-logo">FILM DÜNYASI</div>
+                <div class="footer-links">
+                    <a href="#">Hakkımızda</a>
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">İletişim</a>
+                </div>
+                <p class="copyright">&copy; 2024 Film Dünyası. Tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Detay Görünümü -->
+    <div id="detail-view" class="detail-page">
+        <button class="back-btn" id="backBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div id="detailContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
